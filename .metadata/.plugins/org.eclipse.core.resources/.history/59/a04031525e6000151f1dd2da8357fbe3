@@ -1,0 +1,14 @@
+package account;
+
+public class NomalAccount extends Account{
+	public NomalAccount(){
+		super();
+		wt = new NomalWithdrawTransaction
+	}
+	public NomalAccount(double balance){
+		super(balance);
+	}
+	public String toString(){
+		return "--- NomalAccount ---\nCreateDate : " + createDate + "\nBalance : " + balance;
+	}
+}

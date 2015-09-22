@@ -1,0 +1,22 @@
+package account;
+
+import java.util.Date;
+
+public class SavingAccount extends Account{
+	private Date Saving;
+	
+	public SavingAccount(Date finishDate){
+		super();
+		this.finishDate = finishDate;
+		wt = new MinusWithdrawTransaction(limitedMoney);
+	}
+	public SavingAccount(double balance, Date finishDate){
+		super(balance);
+		this.finishDate = finishDate;
+		wt = new SavingWithdrawTransaction(limitedMoney);
+	}	
+	
+	public String toString(){
+		return "--- SavingAccount ---\nCreateDate : " + createDate + "\nBalance : " + balance + "finishDate : " + finishDate;
+	}
+}

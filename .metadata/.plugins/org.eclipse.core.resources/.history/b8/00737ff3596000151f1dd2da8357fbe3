@@ -1,0 +1,8 @@
+package account;
+
+public abstract WithdrawTransaction {
+	
+	protected double balance;
+	
+	void execute();
+}

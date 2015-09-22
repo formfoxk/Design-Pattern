@@ -1,0 +1,27 @@
+package account;
+
+import java.util.Date;
+
+public class AccountSimulation {
+	
+	public static void main(String[] args){
+		Account normalAccount = new NomalAccount(50000);
+		System.out.println(normalAccount);
+		normalAccount.withdraw(40000);
+		System.out.println(normalAccount);
+		System.out.println();
+		
+		Account minusAccount = new MinusAccount(50000, 100000);
+		System.out.println(minusAccount);
+		minusAccount.withdraw(40000);
+		System.out.println(minusAccount);
+		minusAccount.withdraw(150000);
+		System.out.println(minusAccount);
+		System.out.println();
+		
+		Account savingAccount = new SavingAccount(50000, new Date("2015-10-10"));
+		System.out.println(savingAccount);
+		savingAccount.withdraw(40000);
+		System.out.println(savingAccount);
+	}
+}

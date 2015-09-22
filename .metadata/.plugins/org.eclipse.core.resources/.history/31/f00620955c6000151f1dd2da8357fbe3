@@ -1,0 +1,11 @@
+package account;
+
+
+public class NomalAccount extends Account{
+	public NomalAccount(){
+		super();
+	}
+	public NomalAccount(double balance){
+		super(balance);
+	}
+}

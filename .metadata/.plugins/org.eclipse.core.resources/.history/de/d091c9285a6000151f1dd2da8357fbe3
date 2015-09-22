@@ -1,0 +1,11 @@
+package account;
+
+public class NomalWithdrawTransaction implements WithdrawTransaction{
+
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

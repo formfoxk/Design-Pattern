@@ -1,0 +1,4 @@
+package account;
+
+public class NomalWithdrawTransaction extends WithdrawTransaction{
+}

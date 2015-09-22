@@ -1,0 +1,18 @@
+package account;
+
+public class SavingWithdrawTransaction implements WithdrawTransaction{
+
+	private double limitedMoney = 0;
+	
+	public SavingWithdrawTransaction
+	public SavingWithdrawTransaction(double limitedMoney) {
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

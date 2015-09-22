@@ -1,0 +1,26 @@
+package account;
+
+import java.util.Date;
+
+public class SavingWithdrawTransaction extends WithdrawTransaction{
+
+	public SavingWithdrawTransaction(double balance, double money) {
+		super(balance, money);
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+
+	private Date finishDate;
+	
+	
+
+	
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		if()
+	}
+
+}

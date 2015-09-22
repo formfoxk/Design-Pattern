@@ -1,0 +1,19 @@
+package account;
+
+public class MinusAccount extends Account{
+
+	private double limitedMoney;
+	
+	public MinusAccount(double limitedMoney){
+		super();
+		this.limitedMoney = limitedMoney;
+	}
+	public MinusAccount(double balance, double limitedMoney){
+		super(balance);
+		this.limitedMoney = limitedMoney;
+	}	
+	
+	public String toString(){
+		return "--- MinusAccount ---\nCreateDate : " + createDate + "\nBalance : " + balance;
+	}
+}

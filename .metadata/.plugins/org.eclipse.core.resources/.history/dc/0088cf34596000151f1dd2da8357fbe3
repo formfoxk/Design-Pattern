@@ -1,0 +1,19 @@
+package account;
+
+public class SavingWithdrawTransaction implements WithdrawTransaction{
+
+	private double limitedMoney;
+	
+	public SavingWithdrawTransaction(double balance, double limitedMoney) {
+		// TODO Auto-generated constructor stub
+		this.balance = balacne;
+		this.limitedMoney = limitedMoney;
+	}
+	
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		if()
+	}
+
+}

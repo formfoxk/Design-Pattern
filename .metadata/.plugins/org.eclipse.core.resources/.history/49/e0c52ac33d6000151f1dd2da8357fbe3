@@ -1,0 +1,14 @@
+package ClassExample;
+
+public abstract class Duck { 
+	FlyBehavior flyBehavior; //(Polymorphic) Composition
+
+	public Duck() { }
+
+	abstract void display();
+	public void swim() { System.out.println("All ducks float, even decoys!"); }
+	public void performFly() { flyBehavior.fly(); } // �쐞�엫 & �떎�삎�꽦
+
+	// �떎�뻾 以� �뻾�룞 蹂�寃� (optional)
+	public void setFlyBehavior(FlyBehavior fb) {  flyBehavior = fb; }
+}

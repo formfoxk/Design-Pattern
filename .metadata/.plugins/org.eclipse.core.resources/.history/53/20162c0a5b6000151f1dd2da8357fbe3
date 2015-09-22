@@ -1,0 +1,12 @@
+package account;
+
+public class MinusWithdrawTransaction extends WithdrawTransaction{
+
+	private double limitedMoney;
+	
+	public MinusWithdrawTransaction(double balance, double money, double limitedMoney) {
+		// TODO Auto-generated constructor stub
+		super(balance, money);
+		limited
+	}
+}

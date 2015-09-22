@@ -1,0 +1,9 @@
+package account;
+
+public class NomalWithdrawTransaction extends WithdrawTransaction{
+
+	public NomalWithdrawTransaction(double balance, double money) {
+		super(balance, money);
+		// TODO Auto-generated constructor stub
+	}
+}

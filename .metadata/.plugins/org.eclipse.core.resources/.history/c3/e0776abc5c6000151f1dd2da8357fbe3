@@ -1,0 +1,7 @@
+package account;
+
+public class MinusWithdraw extends Account{
+
+	double limitedMoney
+	
+}

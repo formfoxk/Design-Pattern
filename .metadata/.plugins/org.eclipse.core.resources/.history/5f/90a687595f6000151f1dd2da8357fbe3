@@ -1,0 +1,25 @@
+package account;
+
+public class MinusAccount extends Account{
+
+	private double limitedMoney;
+	
+	public MinusAccount(){
+		super();
+		wt = new MinusWithdrawTransaction(limitedMoney)
+	}
+	public MinusAccount(double limitedMoney){
+		
+		this.limitedMoney = limitedMoney;
+
+	}
+	public MinusAccount(double balance, double limitedMoney){
+		super(balance);
+		this.limitedMoney = limitedMoney;
+	}
+	
+	
+	public String toString(){
+		return "--- NomalAccount ---\nCreateDate : " + createDate + "\nBalance : " + balance;
+	}
+}

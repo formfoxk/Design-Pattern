@@ -1,0 +1,18 @@
+package account;
+
+public abstract class WithdrawTransaction {
+	
+	protected double balance;
+	
+	public WithdrawTransaction(double balance){
+		this.balance = balance;
+	}
+	
+	public WithdrawTransaction(double balance){
+		this.balance = balance;
+	}
+	
+	public double execute(double money){
+		return (balance - money);
+	}
+}

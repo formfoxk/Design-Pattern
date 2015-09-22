@@ -1,0 +1,21 @@
+package ClassExample;
+
+public interface FlyBehavior { //Abstraction of Fly()
+	public void fly();
+}
+
+public class FlyWithWings implements FlyBehavior { // Concrete class
+	public void fly() { 
+		System.out.println("I'm flying!!"); 
+	}
+}
+public class FlyNoWay implements FlyBehavior { // Concrete class
+	public void fly() { 
+		System.out.println("I can't fly"); 
+	}
+}
+public class FlyRocketPowered implements FlyBehavior { // Concrete class
+	public void fly() { 
+		System.out.println("I'm flying through rocket power"); 
+	}
+}

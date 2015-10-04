@@ -1,0 +1,30 @@
+package bank;
+
+import updatecurrentweather.Observer;
+
+public class AdvertisingData implements Subject{
+
+	ArrayList<Observer> observers;
+	float 
+	
+	@Override
+	public void registerObserver(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeObserver(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public setMeasurements()
+	
+}

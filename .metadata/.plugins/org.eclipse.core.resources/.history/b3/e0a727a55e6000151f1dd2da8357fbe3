@@ -1,8 +1,0 @@
-package account;
-
-public abstract class WithdrawTransaction {
-		
-	public double execute(double money){
-		return (balance - money);
-	}
-}

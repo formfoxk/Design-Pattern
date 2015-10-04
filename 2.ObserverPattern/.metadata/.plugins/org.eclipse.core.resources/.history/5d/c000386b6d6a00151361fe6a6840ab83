@@ -1,0 +1,24 @@
+package bank;
+
+public class CorporateCustomerDisplay implements Observer, DisplayElement{
+
+	AdvertisingData adData;
+	float kospi, kosdaq;
+	
+	public CorporateCustomerDisplay(AdvertisingData adData){
+		this.adData = adData;
+	}
+	
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

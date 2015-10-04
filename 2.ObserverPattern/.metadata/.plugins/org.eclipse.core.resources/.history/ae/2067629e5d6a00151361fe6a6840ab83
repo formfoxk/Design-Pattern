@@ -1,0 +1,31 @@
+package updatecurrentweather;
+
+public class StatisticsDisplay implements Observer, DisplayElement {
+	
+	private float tempSum;
+	private float temperature;
+	private int numReadings;
+	private Subject weatherData; // ¡°Å»Åð¡±½Ã »ç¿ë
+
+	public StatisticsDisplay(Subject weatherData) {
+		this.weatherData = weatherData;
+		weatherData.registerObserver(this);
+		
+		this.tempSum = 0.0f;
+		this.numReadings = 0;
+	}
+
+	public void update(float t, float h, float p) {
+		this.temperature = t;
+		
+		this.
+		
+		
+		display();
+	}
+
+	public void display() {
+		System.out.println("Current conditions: " + temperature
+				+ "F degrees and " + humidity + "% humidity");
+	}
+}

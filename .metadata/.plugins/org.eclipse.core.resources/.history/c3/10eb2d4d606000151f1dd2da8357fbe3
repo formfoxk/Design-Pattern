@@ -1,7 +1,0 @@
-package account;
-
-public class AccountSimulation {
-	public static void Main(String[] args){
-		
-	}
-}

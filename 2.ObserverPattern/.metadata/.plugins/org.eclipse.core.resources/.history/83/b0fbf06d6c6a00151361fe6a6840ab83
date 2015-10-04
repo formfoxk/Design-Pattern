@@ -1,0 +1,39 @@
+package bank;
+
+import java.util.ArrayList;
+
+import updatecurrentweather.Observer;
+
+public class AdvertisingData implements Subject{
+
+	ArrayList<Observer> observers = null;
+	float kospi = 0.0f;
+	float kosdaq = 0.0f;
+	
+	public AdvertisingData() {
+		// TODO Auto-generated constructor stub
+		
+		observers = new ArrayList<Observer>();
+	}
+	
+	@Override
+	public void registerObserver(Observer o) {
+		// TODO Auto-generated method stub
+		observers.add(o)
+	}
+
+	@Override
+	public void removeObserver(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public setMeasurements()
+	
+}

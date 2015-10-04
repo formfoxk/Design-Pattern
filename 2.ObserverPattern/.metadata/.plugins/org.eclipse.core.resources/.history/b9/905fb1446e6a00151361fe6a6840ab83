@@ -1,0 +1,55 @@
+package bank;
+
+import java.util.ArrayList;
+
+public class AdvertisingData implements Subject{
+
+	ArrayList<Observer> observers = null;
+	float kospi = 0.0f;
+	float kosdaq = 0.0f;
+	
+	public AdvertisingData() {
+		// TODO Auto-generated constructor stub
+		
+		observers = new ArrayList<Observer>();
+	}
+
+	@Override
+	public void registerObserver(Observer o) {
+		// TODO Auto-generated method stub
+		observers.add(o);
+	}
+
+	@Override
+	public void removeObserver(Observer o) {
+		// TODO Auto-generated method stub
+		observers.remove(o);
+	}
+
+	@Override
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+		for (Observer observer : observers) 
+			observer.update();
+	}
+	
+	public void setMeasurements(float kospi, float kosdaq){
+		this.kospi = kospi;
+		this.kosdaq = kosdaq;
+		
+		measurementsChanged();
+	}
+	
+	public void measurementsChanged(){
+		notifyObservers();
+	}
+
+	public float getKospi() {
+		return kospi;
+	}
+
+	public float getKosdaq() {
+		return kosdaq;
+	}
+	
+}

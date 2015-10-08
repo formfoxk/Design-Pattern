@@ -1,0 +1,5 @@
+INDEX VERSION 1.127
+D:\Github\DesignPattern\3.CombinedPattern - MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4000515683.index
+\JAVA\src
+D:\Github\DesignPattern\3.CombinedPattern - MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4050203794.index
+\JAVA\src

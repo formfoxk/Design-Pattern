@@ -1,0 +1,24 @@
+package default_singleton;
+
+
+public class Singleton {
+	private volatile static Singleton uniqueInstance;
+	int n;
+	
+	private Singleton() {
+		n = 100;
+	}
+
+	public static Singleton getInstance() {
+		if (uniqueInstance == null) {
+			synchronized (Singleton.class) { // 맨 처음 한 번만 실행(동기화)
+				if (uniqueInstance == null) {
+					uniqueInstance = new Singleton();
+				}
+			}
+		}
+		return uniqueInstance;
+	}
+	
+	int getN(){return n;}
+}

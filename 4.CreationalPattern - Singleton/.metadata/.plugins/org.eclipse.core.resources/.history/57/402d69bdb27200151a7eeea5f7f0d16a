@@ -1,0 +1,22 @@
+package default_singleton;
+
+public class Singleton {
+	private static final Singleton instance;
+	private int n;
+	
+	static {
+		try {
+			n = 100;
+			instance = new Singleton();
+		} catch (Exception e) {
+			throw new RuntimeException("err or", e);
+		}
+	}
+
+	public static Singleton getInstance() {
+		return instance;
+	}
+
+	private Singleton() {
+	}
+}

@@ -1,0 +1,33 @@
+package singleton_pattern_having_n_number_of_objects;
+
+import java.util.ArrayList;
+
+public class Singleton {
+	private volatile static ArrayList<Singleton> uniqueInstanceList;
+	int n;
+	
+	private Singleton() {
+		uniqueInstanceList = new ArrayList<Singleton>(10);
+		uniqueInstanceList.clear();
+		n = 100;
+	}
+
+	public static Singleton getInstance() {
+		
+		int size = uniqueInstanceList.size();
+		for(int i = 0; i < size; i++){
+			if (uniqueInstanceList.get(i) == null) {
+				synchronized (Singleton.class) { // 맨 처음 한 번만 실행(동기화)
+					if (uniqueInstanceList.get(i) == null) {
+						uniqueInstanceList.add(i, new Singleton());
+						
+						return uniqueInstanceList.get(i)
+					}
+				}
+			}
+		}
+		return null;
+	}
+	
+	int getN(){return n;}
+}

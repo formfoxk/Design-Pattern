@@ -1,0 +1,5 @@
+package default_singleton;
+
+public class TestSingleton {
+
+}

@@ -1,8 +1,7 @@
 INDEX VERSION 1.3+D:\Github\DesignPattern\3.CombinedPattern - MVC\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1393164717.index
-3358143763.index
 2363145758.index
-3587027485.index
-3523014230.index
 2596544361.index
-4050203794.index
+3358143763.index
+1393164717.index
+3523014230.index
+3587027485.index

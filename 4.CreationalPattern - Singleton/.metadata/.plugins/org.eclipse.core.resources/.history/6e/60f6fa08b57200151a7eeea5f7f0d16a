@@ -1,0 +1,19 @@
+package singleton_pattern_having_n_number_of_objects;
+
+public class Singleton {
+	private static final Singleton instance;
+	static {
+		try {
+			instance = new Singleton();
+		} catch (Exception e) {
+			throw new RuntimeException("err or", e);
+		}
+	}
+
+	public static Singleton getInstance() {
+		return instance;
+	}
+
+	private Singleton() {
+	}
+}

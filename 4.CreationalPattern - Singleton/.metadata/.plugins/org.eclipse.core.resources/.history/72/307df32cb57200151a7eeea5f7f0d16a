@@ -1,0 +1,20 @@
+package singleton_pattern_having_n_number_of_objects;
+
+public class Singleton {
+	private volatile static Singleton uniqueInstance;
+	private final static int size = 10;
+	
+	private Singleton() {
+	}
+
+	public static Singleton getInstance() {
+		if (uniqueInstance == null && size < 10) {
+			synchronized (Singleton.class) { // 맨 처음 한 번만 실행(동기화)
+				if (uniqueInstance == null) {
+					uniqueInstance = new Singleton();
+				}
+			}
+		}
+		return uniqueInstance;
+	}
+}

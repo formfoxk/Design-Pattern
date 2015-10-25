@@ -1,0 +1,18 @@
+package window;
+
+public class HSBDecorator extends WindowDecorator {
+	public HSBDecorator(Window w) {
+		super(w);
+	}
+
+	public void draw() {
+		super.draw(); // Delegation
+		// 추가 기능 Draw the vertical scrollbar;
+		System.out.println(", HSBDecorator");
+	}
+
+	public String getDescription() {
+		return super.getDescription() // Delegation
+				+ ", including vertical scrollbars"; // 추가 기능
+	}
+}

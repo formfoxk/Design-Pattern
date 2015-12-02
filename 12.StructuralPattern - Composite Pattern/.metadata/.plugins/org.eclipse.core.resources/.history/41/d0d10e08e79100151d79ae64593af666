@@ -1,0 +1,102 @@
+package dirsearch;
+
+public class DirSearcher {
+
+	private String rootPath = null; // startPath는 파일 경로까지 모두 지정
+	private String savePath = null; // savePath는 저장될 경로만 지정
+
+	public UdacityFromSrtToText(String rootPath, String savePath) {
+		this.rootPath = rootPath;
+		this.savePath = savePath;
+	}
+
+	public void execute() {
+		SearchDir(rootPath);
+	}
+
+	private void SearchDir(String path) {
+		File dir = new File(path); // 디렉토리 저장
+		File[] fileList = dir.listFiles();
+		try {
+			for (int i = 0; i < fileList.length; i++) {
+				File file = fileList[i];
+				if (file.isFile()) {
+					readFile(file, dir.getName());
+
+				} else if (file.isDirectory()) {
+					// 서브디렉토리가 존재하면 재귀적 방법으로 다시 탐색
+					SearchDir(file.getCanonicalPath().toString());
+				}
+			}
+		} catch (IOException e) {
+
+		}
+	}
+
+	private void readFile(File fileName, String saveFileName) {
+		FileReader fr = null;
+		FileWriter fw = null;
+
+		BufferedReader br = null;
+		BufferedWriter bw = null;
+
+		try {
+
+			// "ReadFile.txt" 파일을 읽는 FileReader 객체 생성
+			// BufferedReader 객체 생성
+			fr = new FileReader(fileName.getAbsolutePath());
+			br = new BufferedReader(fr);
+
+			// FileWriter로 파일 "saveFileName"에 출력한다. 기존 파일에 계속 이어서 쓴다.
+			// BufferedWriter 객체 생성
+			fw = new FileWriter(savePath + "\\" + saveFileName + ".txt", true);
+			bw = new BufferedWriter(fw);
+
+			String s = null;
+			String regex = "^[0-9]:[0-9][0-9]:[0-9][0-9].*$";
+
+			/**
+			 * 
+			 <-Example-> -Before- 0:00:01.120,0:00:05.340 I'm Katherine Kwan,
+			 * and I'm a developer advocate at Google. I started off by -After-
+			 * I'm Katherine Kwan, and I'm a developer advocate at Google. I
+			 * started off by
+			 **/
+
+			bw.write("---" + fileName.getName() + "---"); // 파일이름 쓰기
+			bw.newLine(); // 줄바꿈
+
+			while ((s = br.readLine()) != null)
+				if ((!isCheckRex(regex, s)) && (!s.isEmpty())) {
+					bw.write(s); // 문자열 쓰기
+					bw.newLine(); // 줄바꿈
+				}
+
+			bw.newLine();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// BufferedReader FileReader를 닫아준다.
+			try {
+				if (br != null)
+					br.close();
+				if (fr != null)
+					fr.close();
+				if (bw != null)
+					bw.close();
+				if (fw != null)
+					fw.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	private boolean isCheckRex(String rex, String data) {
+		Pattern numP = Pattern.compile(rex);
+		Matcher match = numP.matcher(data);
+
+		return match.find();
+		
+}

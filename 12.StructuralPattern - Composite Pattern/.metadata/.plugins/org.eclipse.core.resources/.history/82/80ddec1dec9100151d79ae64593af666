@@ -1,0 +1,9 @@
+package dirsearch;
+
+public class DirSearchTestMain {
+	
+	public static void main(String[] args){
+		DirSearcher dirSearcher = new DirSearcher("D:/Github/DesignPattern/12.StructuralPattern - Composite Pattern");
+		dirSearcher.printAll();
+	}
+}

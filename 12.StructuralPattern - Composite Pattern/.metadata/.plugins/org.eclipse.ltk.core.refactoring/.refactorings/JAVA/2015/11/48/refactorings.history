@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;dirsearch.dirSearcher&apos; to &apos;DirSearcher&apos;&#x0D;&#x0A;- Original project: &apos;JAVA&apos;&#x0D;&#x0A;- Original element: &apos;dirsearch.dirSearcher&apos;&#x0D;&#x0A;- Renamed element: &apos;dirsearch.DirSearcher&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;dirSearcher&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;dirsearch{dirSearcher.java[dirSearcher" matchStrategy="1" name="DirSearcher" qualified="false" references="true" similarDeclarations="false" stamp="1448285695598" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,49 @@
+package dirsearch;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class DirSearcher {
+
+	private String rootPath = null; // startPath는 파일 경로까지 모두 지정
+
+	public DirSearcher(String rootPath) {
+		this.rootPath = rootPath;
+	}
+
+	public void execute() {
+		SearchDir(rootPath);
+	}
+
+	private void SearchDir(String path) {
+		File dir = new File(path); // 디렉토리 저장
+		File[] fileList = dir.listFiles();
+		try {
+			for (int i = 0; i < fileList.length; i++) {
+				File file = fileList[i];
+				if (file.isFile()) {
+					System.out.println(dir.getName());
+
+				} else if (file.isDirectory()) {
+					// 서브디렉토리가 존재하면 재귀적 방법으로 다시 탐색
+					SearchDir(file.getCanonicalPath().toString());
+				}
+			}
+		} catch (IOException e) {
+
+		}
+	}
+
+	private boolean isCheckRex(String rex, String data) {
+		Pattern numP = Pattern.compile(rex);
+		Matcher match = numP.matcher(data);
+
+		return match.find();
+		
+}

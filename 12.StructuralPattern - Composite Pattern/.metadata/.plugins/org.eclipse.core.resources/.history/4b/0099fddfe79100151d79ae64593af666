@@ -1,0 +1,7 @@
+package dirsearch;
+
+public class DirSearchTestMain {
+	public static void main(String[] args){
+		DirSercher dirSearcher = null;
+	}
+}
